@@ -301,7 +301,7 @@ function Import-ScoopShim {
     # The scoop executable
     $path = "$SCOOP_APP_DIR\bin\scoop.ps1"
 
-    if (!(Test-Path $SCOOP_SHIMS_DIR)) {
+    if ((Test-Path $SCOOP_SHIMS_DIR)) {
         New-Item -Type Directory $SCOOP_SHIMS_DIR | Out-Null
     }
 
